@@ -22,13 +22,6 @@ jobs:
           distribution: 'microsoft'
           java-version: '21'
 
-      - name: Get Latest Release
-        id: release
-        uses: pozetroninc/github-action-get-latest-release@master
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          repository: ${{ github.repository }}
-
       - name: Retrieve macOS Certificate
         env:
           CERTIFICATE_BASE64: ${{ secrets.MACOS_CERTIFICATE_CONVEYOR }}
